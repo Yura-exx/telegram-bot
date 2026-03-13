@@ -39,7 +39,7 @@ def main_menu(name):
 @bot.message_handler(commands=['start'])
 def start(message):
     name = message.from_user.first_name
-    photo_path = "img/start.png"
+    photo_path = "start.png"
     text, markup = main_menu(name)
     with open(photo_path, 'rb') as photo:
         bot.send_photo(
