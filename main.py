@@ -5,7 +5,7 @@ import time
 import threading
 import os
 
-bot = telebot.TeleBot ("8662761621:AAEuB0yRJ2dlJqgfZH0QpWVMQ3gvHlUM7f4")
+bot = telebot.TeleBot ("8662761621:AAHVBM0XbDoUR3NWozvqraYBYNT8Hf1f41")
 ticket_counter = 0
 ADMIN_ID = 1600262158
 active_chats = {}
