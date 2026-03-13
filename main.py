@@ -1,4 +1,4 @@
-﻿import telebot
+import telebot
 from telebot import types
 import datetime
 import time
@@ -208,5 +208,21 @@ def forward_messages(message):
                 log_message(ticket_id, f"Повідомлення від @{message.from_user.username or message.from_user.first_name}: {message.text}")
                 return
         bot.send_message(message.chat.id, "Я не розумію вас. Якщо ви заблудились - використайте команду: /start")
+
+from flask import Flask
+import threading
+import os
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Bot is running"
+
+def run():
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port)
+
+threading.Thread(target=run).start()
 
 bot.polling(none_stop=True)
