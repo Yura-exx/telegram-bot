@@ -176,7 +176,7 @@ def forward_messages(message):
         if message.text == "/stop":
             for ticket_id, (admin_id, user_id) in list(active_chats.items()):
                 if admin_id == ADMIN_ID:
-                    photo = open("img/start.png", 'rb')
+                    photo = open("start.png", 'rb')
                     markup = types.InlineKeyboardMarkup()
                     btn_back = types.InlineKeyboardButton("⬅️ Повернутися в головне меню", callback_data="back_to_start")
                     btn_support = types.InlineKeyboardButton("🧑‍💻 Зв'язок з службою підтримки", callback_data="support")
